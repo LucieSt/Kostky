@@ -1,4 +1,4 @@
-import { Dice } from "./Dice/index.js"
+import { Dice } from "./Dice/index.js";
 
 const roll = () => {
   return Math.floor(Math.random() * 6) + 1;
@@ -7,4 +7,4 @@ const roll = () => {
 console.log('funguju!');
 
 const containerElm = document.getElementById('dice-row');
-containerElm.append(Dice({side: 1}));
+containerElm.append(Dice({side: roll()}), Dice({side: roll()}), Dice({side: roll()}), Dice({side: roll()}));

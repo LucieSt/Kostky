@@ -2,6 +2,10 @@ export const Dice = (props) => {
 
     let { side } = props;
 
+    const roll = () => {
+        return Math.floor(Math.random() * 6) + 1;
+    };
+
     const diceElm = document.createElement('div');
     diceElm.classList.add('dice');
 
@@ -15,13 +19,10 @@ export const Dice = (props) => {
     diceElm.append(diceImg, diceBtn);
 
     diceBtn.addEventListener('click', () => {
-        console.log('gg')
-    })
-
-    console.log(diceElm);
+        diceElm.replaceWith(Dice({
+            side: roll()
+        }));
+    });
 
     return diceElm;
 }
-
-
-// dat si do komponenty znovu funkci random a zavolat ji pri prepsani komponenty po button listeneru
