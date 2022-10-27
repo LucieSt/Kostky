@@ -7,4 +7,4 @@ const roll = () => {
 console.log('funguju!');
 
 const containerElm = document.getElementById('dice-row');
-containerElm.append(Dice({side: 7}));
+containerElm.append(Dice({side: 1}));

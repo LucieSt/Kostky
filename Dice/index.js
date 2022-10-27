@@ -6,7 +6,7 @@ export const Dice = (props) => {
     diceElm.classList.add('dice');
 
     const diceImg = document.createElement('div');
-    diceImg.classList.add('dice__side', 'dice__side--1')
+    diceImg.classList.add('dice__side', `dice__side--${side}`)
 
     const diceBtn = document.createElement('button');
     diceBtn.classList.add('btn', 'btn--small', 'roll-btn')
@@ -14,7 +14,14 @@ export const Dice = (props) => {
 
     diceElm.append(diceImg, diceBtn);
 
+    diceBtn.addEventListener('click', () => {
+        console.log('gg')
+    })
+
     console.log(diceElm);
 
     return diceElm;
 }
+
+
+// dat si do komponenty znovu funkci random a zavolat ji pri prepsani komponenty po button listeneru
